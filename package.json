@@ -1,8 +1,8 @@
 {
-    "name": "node-template",
+    "name": "user-management-yt",
     "version": "1.0.0",
     "type": "module",
-    "description": "Plantilla base para los proyectos desarrollados en el curso de Node.JS de la plataforma LearnThis Academy",
+    "description": "Desarrollar una aplicación para la gestión de usuarios de una aplicación web.",
     "scripts": {
         "dev": "nodemon src/index.js",
         "start": "node src/index.js",
@@ -11,10 +11,7 @@
         "prepare": "husky install",
         "postinstall": "npm run prepare"
     },
-    "author": {
-        "name": "LearnThis Academy",
-        "url": "https://learnthisacademy.com"
-    },
+    "author": "Desarrollo Útil",
     "license": "MIT",
     "devDependencies": {
         "eslint": "8.40.0",
@@ -29,10 +26,19 @@
         "prettier": "2.8.8"
     },
     "imports": {
-        "#Lib/*": "./src/lib/*"
+        "#config/*": "./src/config/*",
+        "#controllers/*": "./src/controllers/*",
+        "#dto/*": "./src/dto/*",
+        "#routes/*": "./src/routes/*",
+        "#schemas/*": "./src/schemas/*"
     },
     "lint-staged": {
         "*.js": "eslint --fix",
         "*.{js,md}": "prettier --write"
+    },
+    "dependencies": {
+        "express": "^4.21.2",
+        "mongodb": "^6.12.0",
+        "mongoose": "^8.9.5"
     }
 }

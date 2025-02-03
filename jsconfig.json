@@ -4,7 +4,11 @@
         "module": "Node16",
         "baseUrl": "./",
         "paths": {
-            "#Lib/*": ["./src/lib/*"]
+            "#config/*": ["./src/config/*"],
+        "#controllers/*": ["./src/controllers/*"],
+        "#dto/*": ["./src/dto/*"],
+        "#routes/*": ["./src/routes/*"],
+        "#schemas/*": ["./src/schemas/*"]
         }
     }
 }
